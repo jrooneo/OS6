@@ -1,0 +1,12 @@
+OSS Project 6
+
+oss [processCount]
+Where process count is between 1 and 18
+
+Memory management now takes place. OSS creates different userProcess' that make random memory calls.
+These calls are sent to OSS to handle which either finds the memory in a main memory array or creates the page in an open frame.
+If no open frames then a non-referenced page is cleared out so that a new page can be entered.
+Then the local array is mirrored to the shared table.
+
+Problems:
+Only output indiciates memory read and writes as they happen. No statistics are being calculated. Also leaks shared memory and signal handling is not proper.
